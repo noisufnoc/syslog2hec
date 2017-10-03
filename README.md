@@ -30,3 +30,6 @@ noisufnoc/syslog2hec:latest
 
 ### Notes
 I had best luck with this using Docker host networking.  You can omit this setting and expose TCP/UDP 514, however I experienced some NATing in the syslog data which caused the sending IP to be that of my container on the Docker network. YMMV, if you have a better way of accomplishing this, feel free to file a PR/Issue.
+
+### Here be dragons. Thou art forewarned
+Obviously this is an exercise in learning to build and deploy a Docker image.  I offer no warranty or support for running this in a production environment.  This software is not endorsed or supported by Splunk or Balabit.
