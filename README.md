@@ -5,6 +5,7 @@ Send syslog to Splunk HTTP Event Collector via preconfigured syslog-ng container
 I just wrapped the config up into an image to learn how to build a Docker container, full credit goes to the following:
 
 Ryan Faircloth - [Building a More Perfect Syslog Collection Infrastructure](https://www.rfaircloth.com/2017/02/10/building-perfect-syslog-collection-infrastructure/)
+
 Mark Bonsack - [Syslog-ng and HEC: Scalable Aggregated Data Collection in Splunk](https://www.splunk.com/blog/2017/03/30/syslog-ng-and-hec-scalable-aggregated-data-collection-in-splunk.html)
 
 Today this still needs quite a bit of polish.  The command below will run the conainer, using host networking, to listen on TCP/UDP 514 and send data to the raw HEC endpoint.  As discussed in Mark's blog, this is more desireable so that Splunk TAs can be used.  The provided config also includes a template for sending JSON formatted data, however the necessary TAs would need to be updated to work with this data formatting.
